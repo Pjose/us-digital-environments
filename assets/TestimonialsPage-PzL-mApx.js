@@ -1,0 +1,1 @@
+import{t as e}from"./index-CTspNHP4.js";import{n as t,t as n}from"./TestimonialsSection-B9whsc6K.js";var r=e(),i=()=>(0,r.jsxs)(`div`,{className:`min-h-screen`,children:[(0,r.jsx)(n,{}),(0,r.jsx)(t,{})]});export{i as default};

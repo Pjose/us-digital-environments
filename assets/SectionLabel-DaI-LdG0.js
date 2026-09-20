@@ -1,1 +1,0 @@
-import{t as e}from"./index-BdLU7JHG.js";var t=e();function n({text:e}){return(0,t.jsx)(`p`,{className:`text-[#c01c1c] text-xs tracking-[0.3em] uppercase mb-3`,style:{fontFamily:`"Geist:Medium"`},children:e})}export{n as t};

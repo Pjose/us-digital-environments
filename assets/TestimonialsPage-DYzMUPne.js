@@ -1,1 +1,0 @@
-import{t as e}from"./index-BdLU7JHG.js";import{n as t,t as n}from"./TestimonialsSection--RyHlOO1.js";var r=e(),i=()=>(0,r.jsxs)(`div`,{className:`min-h-screen`,children:[(0,r.jsx)(n,{}),(0,r.jsx)(t,{})]});export{i as default};
