@@ -1,1 +1,0 @@
-import{t as e}from"./index-2RUcudoe.js";import{t}from"./GallerySection-DtytLrFr.js";var n=e(),r=()=>(0,n.jsx)(`div`,{className:`min-h-screen`,children:(0,n.jsx)(t,{})});export{r as default};
