@@ -1,0 +1,1 @@
+import{t as e}from"./index-BU_f9YqQ.js";var t=e(),n=()=>(0,t.jsx)(`div`,{children:`ServiceDetailPage`});export{n as default};

@@ -1,1 +1,0 @@
-import{t as e}from"./index-C1Fr5-7b.js";var t=e(),n=()=>(0,t.jsx)(`div`,{children:`ServiceDetailPage`});export{n as default};
