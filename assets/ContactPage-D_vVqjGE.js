@@ -1,1 +1,0 @@
-import{t as e}from"./index-BU_f9YqQ.js";import{t}from"./ContactSection-FVA9vn4Q.js";var n=e(),r=()=>(0,n.jsx)(`div`,{className:`min-h-screen`,children:(0,n.jsx)(t,{})});export{r as default};
