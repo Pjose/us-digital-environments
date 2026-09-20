@@ -1,1 +1,0 @@
-import{t as e}from"./index-BHm5spBV.js";var t=e(),n=()=>(0,t.jsx)(`div`,{children:`ServiceDetailPage`});export{n as default};

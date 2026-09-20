@@ -1,0 +1,1 @@
+import{t as e}from"./index-2RUcudoe.js";var t=e(),n=()=>(0,t.jsx)(`div`,{children:`ServiceDetailPage`});export{n as default};
