@@ -8,7 +8,7 @@ export default function NotFoundPage() {
     <div style={{ textAlign: "center", padding: "50px", fontFamily: "sans-serif" }}>
       <h1>Oops! Page Not Found</h1>
       <p>The page you are looking for doesn't exist or an error occurred.</p>
-      <Link to="/us-digital-environments/" style={{ color: "blue", textDecoration: "underline" }}>Go Back Home</Link>
+      <Link to="/us-digital-environments" style={{ color: "blue", textDecoration: "underline" }}>Go Back Home</Link>
     </div>
   );
 }
