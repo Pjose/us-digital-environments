@@ -1,18 +1,18 @@
 function Footer() {
     const footerLinks = {
         Services: [
-            { label: "Home Theater", url: "/services" },
-            { label: "Smart Automation", url: "/services" },
-            { label: "Audio & Video", url: "/services" },
-            { label: "Lighting Control", url: "/services" },
-            { label: "Networking", url: "/services" },
-            { label: "Outdoor AV", url: "/services" }
+            { label: "Home Theater", url: "services" },
+            { label: "Smart Automation", url: "services" },
+            { label: "Audio & Video", url: "services" },
+            { label: "Lighting Control", url: "services" },
+            { label: "Networking", url: "services" },
+            { label: "Outdoor AV", url: "services" }
         ],
         Company: [
-            { label: "About Us", url: "/about" },
-            { label: "Portfolio", url: "/gallery" },
-            { label: "Testimonials", url: "/testimonials" },
-            { label: "Contact", url: "/contact" }
+            { label: "About Us", url: "about" },
+            { label: "Portfolio", url: "gallery" },
+            { label: "Testimonials", url: "testimonials" },
+            { label: "Contact", url: "contact" }
         ],
         Connect: [
             { label: "Yelp", url: "https://www.yelp.com/biz/us-digital-environments-dallas-4" },
@@ -35,7 +35,7 @@ function Footer() {
                 <div className="grid md:grid-cols-4 gap-12 mb-12">
                     <div>
                         <div className="mb-4">
-                            <a href="/us-digital-environments/" className="flex items-center gap-3 group">
+                            <a href="/" className="flex items-center gap-3 group">
                                 <img
                                     src="./us-digital-environments.png"
                                     alt="US Digital Environments"

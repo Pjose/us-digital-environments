@@ -18,7 +18,7 @@ function Navbar() {
                 }`}
         >
             <div className="max-w-7xl mx-auto px-6 md:px-12 flex items-center justify-between py-4">
-                <a href="/us-digital-environments/" className="flex items-center gap-3 group">
+                <a href="/" className="flex items-center gap-3 group">
                     <img
                         src="./us-digital-environments.png"
                         alt="US Digital Environments logo"
