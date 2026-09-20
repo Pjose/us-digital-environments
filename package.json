@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://Pjose.github.io/us-digital-environments/",
+  "homepage": "https://Pjose.github.io/us-digital-environments",
   "scripts": {
     "dev": "vite",
     "build": "vite build",

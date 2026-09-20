@@ -16,7 +16,7 @@ const ContactPage = lazy(() => import('../features/contact/ContactPage'));
 
 const router = createBrowserRouter([
   {
-    path: '/',
+    path: '/us-digital-environments/',
     element: <RootLayout />, // Contains your global Navbar and Footer
     errorElement: <NotFoundPage />, // Fallback for unmatched routes
     children: [

@@ -35,7 +35,7 @@ function Footer() {
                 <div className="grid md:grid-cols-4 gap-12 mb-12">
                     <div>
                         <div className="mb-4">
-                            <a href="/" className="flex items-center gap-3 group">
+                            <a href="/us-digital-environments/" className="flex items-center gap-3 group">
                                 <img
                                     src="./us-digital-environments.png"
                                     alt="US Digital Environments"
