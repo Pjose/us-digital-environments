@@ -18,7 +18,7 @@ function Navbar() {
                 }`}
         >
             <div className="max-w-7xl mx-auto px-6 md:px-12 flex items-center justify-between py-4">
-                <a href="/" className="flex items-center gap-3 group">
+                <a href="/us-digital-environments/" className="flex items-center gap-3 group">
                     <img
                         src="./us-digital-environments.png"
                         alt="US Digital Environments logo"
@@ -33,7 +33,7 @@ function Navbar() {
                     {links.map((l) => (
                         <a
                             key={l}
-                            href={`/${l.toLowerCase()}`}
+                            href={`/us-digital-environments/${l.toLowerCase()}`}
                             className="nav-link text-gray-300 hover:text-white text-sm transition-colors duration-200"
                             style={{ fontFamily: '"Geist:Medium"' }}
                         >
@@ -79,7 +79,7 @@ function Navbar() {
                     {links.map((l) => (
                         <a
                             key={l}
-                            href={`/${l.toLowerCase()}`}
+                            href={`/us-digital-environments/${l.toLowerCase()}`}
                             className="text-gray-300 hover:text-[#c01c1c] text-sm transition-colors"
                             style={{ fontFamily: '"Geist:Medium"' }}
                             onClick={() => setMenuOpen(false)}
