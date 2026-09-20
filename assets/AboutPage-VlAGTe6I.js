@@ -1,0 +1,1 @@
+import{t as e}from"./index-C1Fr5-7b.js";import{t}from"./TrustSection-DLtW5x80.js";var n=e(),r=()=>(0,n.jsx)(`div`,{className:`min-h-screen`,children:(0,n.jsx)(t,{})});export{r as default};

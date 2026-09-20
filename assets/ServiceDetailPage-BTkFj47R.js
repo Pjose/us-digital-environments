@@ -1,1 +1,0 @@
-import{t as e}from"./index-CTspNHP4.js";var t=e(),n=()=>(0,t.jsx)(`div`,{children:`ServiceDetailPage`});export{n as default};
