@@ -1,18 +1,18 @@
 function Footer() {
     const footerLinks = {
         Services: [
-            { label: "Home Theater", url: "services" },
-            { label: "Smart Automation", url: "services" },
-            { label: "Audio & Video", url: "services" },
-            { label: "Lighting Control", url: "services" },
-            { label: "Networking", url: "services" },
-            { label: "Outdoor AV", url: "services" }
+            { label: "Home Theater", url: "/services" },
+            { label: "Smart Automation", url: "/services" },
+            { label: "Audio & Video", url: "/services" },
+            { label: "Lighting Control", url: "/services" },
+            { label: "Networking", url: "/services" },
+            { label: "Outdoor AV", url: "/services" }
         ],
         Company: [
-            { label: "About Us", url: "about" },
-            { label: "Portfolio", url: "gallery" },
-            { label: "Testimonials", url: "testimonials" },
-            { label: "Contact", url: "contact" }
+            { label: "About Us", url: "/about" },
+            { label: "Portfolio", url: "/gallery" },
+            { label: "Testimonials", url: "/testimonials" },
+            { label: "Contact", url: "/contact" }
         ],
         Connect: [
             { label: "Yelp", url: "https://www.yelp.com/biz/us-digital-environments-dallas-4" },

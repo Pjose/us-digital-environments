@@ -33,7 +33,7 @@ function Navbar() {
                     {links.map((l) => (
                         <a
                             key={l}
-                            href={`${l.toLowerCase()}`}
+                            href={`/${l.toLowerCase()}`}
                             className="nav-link text-gray-300 hover:text-white text-sm transition-colors duration-200"
                             style={{ fontFamily: '"Geist:Medium"' }}
                         >
