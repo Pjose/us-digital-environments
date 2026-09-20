@@ -21,12 +21,12 @@ const router = createBrowserRouter([
     errorElement: <NotFoundPage />, // Fallback for unmatched routes
     children: [
       { index: true, element: <LandingPage /> },
-      { path: '/services', element: <Services /> },
-      { path: '/services/:slug', element: <ServiceDetail /> }, // Dynamic route for individual services
-      { path: '/about', element: <AboutPage /> },
-      { path: '/gallery', element: <GalleryPage /> },
-      { path: '/testimonials', element: <TestimonialsPage /> },
-      { path: '/contact', element: <ContactPage /> },
+      { path: '/us-digital-environments/services', element: <Services /> },
+      { path: '/us-digital-environments/services/:slug', element: <ServiceDetail /> }, // Dynamic route for individual services
+      { path: '/us-digital-environments/about', element: <AboutPage /> },
+      { path: '/us-digital-environments/gallery', element: <GalleryPage /> },
+      { path: '/us-digital-environments/testimonials', element: <TestimonialsPage /> },
+      { path: '/us-digital-environments/contact', element: <ContactPage /> },
     ],
   },
 ], { basename: '/us-digital-environments' }); // Set the base path for all routes
