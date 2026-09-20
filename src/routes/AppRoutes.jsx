@@ -29,7 +29,7 @@ const router = createBrowserRouter([
       { path: 'contact', element: <ContactPage /> },
     ],
   },
-], { basename: '/us-digital-environments/' }); // Set the base path for all routes
+], { basename: '/us-digital-environments' }); // Set the base path for all routes
 
 export function AppRoutes() {
   return <RouterProvider router={router} />;
