@@ -1,0 +1,114 @@
+import { useState } from "react";
+import SectionLabel from "../../../components/SectionLabel";
+import { SERVICES } from "../../../assets/data/services";
+
+export default function ContactSection() {
+    const [form, setForm] = useState({ name: "", phone: "", email: "", service: "", message: "" });
+    const [sent, setSent] = useState(false);
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        setSent(true);
+    };
+
+    return (
+        <section id="contact" className="full-width-breakout bg-[#080e1a]">
+            <div className="py-24 px-6 md:px-12 lg:px-20 max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-start">
+                <div>
+                    <SectionLabel text="Get Started" />
+                    <h2 className="text-3xl md:text-5xl text-white mb-6" style={{ fontFamily: '"Outfit:ExtraBold"', fontWeight: 800 }}>
+                        Ready to Transform<br />Your Home?
+                    </h2>
+                    <p className="text-gray-400 mb-10 leading-relaxed" style={{ fontFamily: '"Geist:Regular"' }}>
+                        Schedule your complimentary design consultation. We'll assess your space, discuss your vision, and craft a technology solution that exceeds expectations.
+                    </p>
+                    <div className="space-y-5">
+                        {[
+                            { icon: "📍", label: "Address", val: "Dallas – Fort Worth Metroplex, TX" },
+                            { icon: "📞", label: "Phone", val: "(469) 466-2221" },
+                            { icon: "✉️", label: "Email", val: "info@usdigitalenvironments.com" },
+                            { icon: "🕐", label: "Hours", val: "Mon–Fri 8am–6pm, Sat by appointment" },
+                        ].map((item, i) => (
+                            <div key={i} className="flex items-start gap-4">
+                                <div className="w-10 h-10 bg-[#111c30] border border-[#c01c1c]/20 rounded-sm flex items-center justify-center text-base flex-shrink-0">
+                                    {item.icon}
+                                </div>
+                                <div>
+                                    <p className="text-gray-500 text-xs uppercase tracking-widest" style={{ fontFamily: '"Geist:Medium"' }}>{item.label}</p>
+                                    <p className="text-gray-200 text-sm mt-0.5" style={{ fontFamily: '"Geist:Regular"' }}>{item.val}</p>
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+
+                <div className="bg-[#0d1524] border border-[#c01c1c]/10 rounded-sm p-8">
+                    <h3 className="text-white text-xl mb-6" style={{ fontFamily: '"Outfit:Bold"', fontWeight: 700 }}>
+                        Request Your Free Consultation
+                    </h3>
+                    {sent ? (
+                        <div className="text-center py-12">
+                            <div className="w-16 h-16 bg-[#c01c1c]/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                                <svg viewBox="0 0 24 24" fill="#c01c1c" className="w-8 h-8">
+                                    <path fillRule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12zm13.36-1.814a.75.75 0 10-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 00-1.06 1.06l2.25 2.25a.75.75 0 001.14-.094l3.75-5.25z" clipRule="evenodd" />
+                                </svg>
+                            </div>
+                            <p className="text-white text-lg mb-2" style={{ fontFamily: '"Outfit:Bold"' }}>Message Sent!</p>
+                            <p className="text-gray-400 text-sm" style={{ fontFamily: '"Geist:Regular"' }}>We'll reach out within one business day.</p>
+                        </div>
+                    ) : (
+                        <form onSubmit={handleSubmit} className="space-y-4">
+                            {[
+                                { name: "name", label: "Full Name", type: "text", placeholder: "John Smith" },
+                                { name: "phone", label: "Phone Number", type: "tel", placeholder: "(214) 555-0100" },
+                                { name: "email", label: "Email Address", type: "email", placeholder: "john@example.com" },
+                            ].map((f) => (
+                                <div key={f.name}>
+                                    <label className="block text-gray-400 text-xs uppercase tracking-widest mb-1.5" style={{ fontFamily: '"Geist:Medium"' }}>{f.label}</label>
+                                    <input
+                                        type={f.type}
+                                        placeholder={f.placeholder}
+                                        value={f.name}
+                                        onChange={(e) => setForm({ ...form, [f.name]: e.target.value })}
+                                        className="w-full bg-[#080e1a] border border-[#c01c1c]/15 text-white text-sm rounded-sm px-4 py-3 focus:outline-none focus:border-[#c01c1c]/60 placeholder-gray-600 transition-colors"
+                                        style={{ fontFamily: '"Geist:Regular"' }}
+                                    />
+                                </div>
+                            ))}
+                            <div>
+                                <label className="block text-gray-400 text-xs uppercase tracking-widest mb-1.5" style={{ fontFamily: '"Geist:Medium"' }}>Service of Interest</label>
+                                <select
+                                    value={form.service}
+                                    onChange={(e) => setForm({ ...form, service: e.target.value })}
+                                    className="w-full bg-[#080e1a] border border-[#c01c1c]/15 text-white text-sm rounded-sm px-4 py-3 focus:outline-none focus:border-[#c01c1c]/60 transition-colors"
+                                    style={{ fontFamily: '"Geist:Regular"' }}
+                                >
+                                    <option value="" className="bg-[#080e1a]">Select a service…</option>
+                                    {SERVICES.map((s) => <option key={s.title} value={s.title} className="bg-[#080e1a]">{s.title}</option>)}
+                                </select>
+                            </div>
+                            <div>
+                                <label className="block text-gray-400 text-xs uppercase tracking-widest mb-1.5" style={{ fontFamily: '"Geist:Medium"' }}>Project Details</label>
+                                <textarea
+                                    rows={4}
+                                    placeholder="Tell us about your project…"
+                                    value={form.message}
+                                    onChange={(e) => setForm({ ...form, message: e.target.value })}
+                                    className="w-full bg-[#080e1a] border border-[#c01c1c]/15 text-white text-sm rounded-sm px-4 py-3 focus:outline-none focus:border-[#c01c1c]/60 placeholder-gray-600 transition-colors resize-none"
+                                    style={{ fontFamily: '"Geist:Regular"' }}
+                                />
+                            </div>
+                            <button
+                                type="submit"
+                                className="w-full py-4 bg-[#c01c1c] text-white font-semibold rounded-sm hover:bg-[#e03030] transition-colors duration-300 mt-2"
+                                style={{ fontFamily: '"Outfit:SemiBold"' }}
+                            >
+                                Send My Request
+                            </button>
+                        </form>
+                    )}
+                </div>
+            </div>
+        </section>
+    );
+}

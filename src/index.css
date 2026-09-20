@@ -1,0 +1,146 @@
+@font-face {
+  font-family: "Outfit:ExtraBold";
+  font-style: normal;
+  font-weight: 800;
+  src: url("https://static.figma.com/font/Outfit_wght__2") format("woff2");
+}
+
+@font-face {
+  font-family: "Outfit:SemiBold";
+  font-style: normal;
+  font-weight: 600;
+  src: url("https://static.figma.com/font/Outfit_wght__2") format("woff2");
+}
+
+@font-face {
+  font-family: "Outfit:Bold";
+  font-style: normal;
+  font-weight: 700;
+  src: url("https://static.figma.com/font/Outfit_wght__2") format("woff2");
+}
+
+@font-face {
+  font-family: "Geist:Medium";
+  font-style: normal;
+  font-weight: 500;
+  src: url("https://static.figma.com/font/Geist_wght__1") format("woff2");
+}
+
+@font-face {
+  font-family: "Geist:Regular";
+  font-style: normal;
+  font-weight: 400;
+  src: url("https://static.figma.com/font/Geist_wght__1") format("woff2");
+}
+
+@import 'tailwindcss';
+
+@theme {
+  --color-usde-navy: #080e1a;
+  --color-usde-dark: #0d1524;
+  --color-usde-card: #111c30;
+  --color-usde-red: #c01c1c;
+  --color-usde-red-light: #e03030;
+  --color-usde-gold: #e8a020;
+  --color-usde-border: rgba(192, 28, 28, 0.15);
+  --font-display: "Outfit:ExtraBold", "Outfit", system-ui, sans-serif;
+  --font-heading: "Outfit:Bold", "Outfit", system-ui, sans-serif;
+  --font-sub: "Outfit:SemiBold", "Outfit", system-ui, sans-serif;
+  --font-body: "Geist:Regular", "Geist", system-ui, sans-serif;
+  --font-label: "Geist:Medium", "Geist", system-ui, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #080e1a;
+  color: #e8edf5;
+  font-family: var(--font-body);
+  margin: 0;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #080e1a;
+}
+::-webkit-scrollbar-thumb {
+  background: #1e3a5a;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #c01c1c;
+}
+
+@keyframes hero-zoom {
+  from { transform: scale(1); }
+  to   { transform: scale(1.12); }
+}
+
+@keyframes fade-in {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes slide-up {
+  from { opacity: 0; transform: translateY(32px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.hero-zoom {
+  animation: hero-zoom 8s ease-in-out forwards;
+}
+
+.fade-in {
+  animation: fade-in 1.2s ease forwards;
+}
+
+.slide-up {
+  animation: slide-up 0.9s ease forwards;
+}
+
+.service-card:hover {
+  border-color: rgba(192, 28, 28, 0.5);
+  transform: translateY(-4px);
+}
+
+.gallery-item:hover .gallery-overlay {
+  opacity: 1;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.05);
+}
+
+.nav-link {
+  position: relative;
+}
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: #c01c1c;
+  transition: width 0.3s ease;
+}
+.nav-link:hover::after {
+  width: 100%;
+}
+
+.full-width-breakout {
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+}
